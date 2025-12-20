@@ -1,0 +1,138 @@
+<map>
+<points>
+    <point id="elevator" x="0.11" y="0.45" clickable="true" />
+    <point id="A" x="0.5" y="0.45" clickable="false" />
+    <point id="B" x="0.5" y="0.3" clickable="false" />
+    <point id="C" x="0.5" y="0.235" clickable="false" />
+    <point id="s_hall" x="0.55" y="0.3" clickable="true" />
+    <point id="down" x="0.29" y="0.3" clickable="true" />
+    <point id="up" x="0.09" y="0.3" clickable="true" />
+    <point id="201" x="0.55" y="0.235" clickable="true" />
+
+
+    <point id="D" x="0.5" y="0.649" clickable="false" />
+    <point id="girlswashroom" x="0.46" y="0.649" clickable="true" />
+
+    <point id="E" x="0.5" y="0.68" clickable="false" />
+    <point id="boyswashroom" x="0.46" y="0.68" clickable="true" />
+    <point id="F" x="0.5" y="0.72" clickable="false" />
+    <point id="iqac" x="0.55" y="0.72" clickable="true" />
+    <point id="G" x="0.5" y="0.81" clickable="false" />
+    <point id="E_exit" x="0.45" y="0.81" clickable="true" />
+    <point id="H" x="0.5" y="0.87" clickable="false" />
+    <point id="exam_c" x="0.55" y="0.87" clickable="true" />
+
+
+</points>
+    <textpoints>
+        <textpoint id="up" x="0.095" y="0.2" clickable="true" />
+        <textpoint id="down" x="0.29" y="0.2" clickable="true" />
+        <textpoint id="201" x="0.78" y="0.2" clickable="true" />
+        <textpoint id="s_hall"  x="0.8" y="0.45" clickable="true" />
+        <textpoint id="iqac" x="0.76" y="0.75" clickable="true" />
+        <textpoint id="E_exit" x="0.2" y="0.85" clickable="true" />
+        <textpoint id="boyswashroom" x="0.2" y="0.74" clickable="true" />
+        <textpoint id="girlswashroom" x="0.19" y="0.625" clickable="true" />
+        <textpoint id="exam_c" x="0.76" y="0.85" clickable="true"/>
+    </textpoints>
+
+<graph>
+ <node id="elevator">
+        <connectsTo>A</connectsTo>
+    </node>
+
+    <node id="A">
+        <connectsTo>B</connectsTo>
+        <connectsTo>elevator</connectsTo>
+        <connectsTo>D</connectsTo>
+    </node>
+    <node id="B">
+        <connectsTo>A</connectsTo>
+        <connectsTo>C</connectsTo>
+        <connectsTo>down</connectsTo>
+        <connectsTo>s_hall</connectsTo>
+
+    </node>
+    <node id="s_hall">
+        <connectsTo>B</connectsTo>
+
+
+
+    </node>
+
+    <node id="C">
+        <connectsTo>B</connectsTo>
+        <connectsTo>201</connectsTo>
+
+    </node>
+
+
+    <node id="down">
+        <connectsTo>B</connectsTo>
+        <connectsTo>up</connectsTo>
+    </node>
+
+    <node id="up">
+        <connectsTo>down</connectsTo>
+    </node>
+
+    <node id="201">
+        <connectsTo>C</connectsTo>
+
+    </node>
+
+    <node id="D">
+
+
+        <connectsTo>girlswashroom</connectsTo>
+        <connectsTo>A</connectsTo>
+        <connectsTo>E</connectsTo>
+        <connectsTo>s_hall2</connectsTo>
+
+    </node>
+
+    <node id="girlswashroom">
+        <connectsTo>D</connectsTo>
+
+    </node>
+    <node id="E">
+        <connectsTo>D</connectsTo>
+        <connectsTo>F</connectsTo>
+        <connectsTo>boyswashroom</connectsTo>
+    </node>
+    <node id="boyswashroom">
+        <connectsTo>E</connectsTo>
+    </node>
+    <node id="F">
+        <connectsTo>E</connectsTo>
+        <connectsTo>G</connectsTo>
+        <connectsTo>iqac</connectsTo>
+
+    </node>
+    <node id="iqac">
+        <connectsTo>F</connectsTo>
+    </node>
+
+    <node id="G">
+        <connectsTo>F</connectsTo>
+        <connectsTo>E_exit</connectsTo>
+        <connectsTo>H</connectsTo>
+
+    </node>
+
+    <node id="H">
+        <connectsTo>exam_c</connectsTo>
+        <connectsTo>G</connectsTo>
+
+    </node>
+    <node id="E_exit">
+        <connectsTo>G</connectsTo>
+
+    </node>
+    <node id="exam_c">
+        <connectsTo>H</connectsTo>
+    </node>
+
+
+</graph>
+</map>

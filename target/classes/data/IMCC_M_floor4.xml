@@ -1,0 +1,137 @@
+<map>
+<points>
+    <point id="elevator" x="0.11" y="0.45" clickable="true" />
+    <point id="A" x="0.5" y="0.45" clickable="false" />
+    <point id="B" x="0.5" y="0.44" clickable="false" />
+    <point id="403" x="0.55" y="0.44" clickable="true" />
+    <point id="C" x="0.5" y="0.3" clickable="false" />
+    <point id="D" x="0.5" y="0.235" clickable="false" />
+    <point id="down" x="0.29" y="0.3" clickable="true" />
+    <point id="up" x="0.09" y="0.3" clickable="true" />
+    <point id="404" x="0.54" y="0.235" clickable="true" />
+    <point id="G" x="0.5" y="0.545" clickable="false" />
+    <point id="computerlab1" x="0.54" y="0.545" clickable="true" />
+    <point id="H" x="0.5" y="0.576" clickable="false" />
+    <point id="janitor" x="0.4" y="0.576" clickable="true" />
+    <point id="I" x="0.5" y="0.642" clickable="false" />
+    <point id="d_washroom" x="0.4" y="0.642" clickable="true" />
+    <point id="J" x="0.5" y="0.68" clickable="false" />
+    <point id="boyswashroom" x="0.4" y="0.68" clickable="true" />
+    <point id="K" x="0.5" y="0.81" clickable="false" />
+    <point id="E_exit" x="0.45" y="0.81" clickable="true" />
+
+
+</points>
+    <textpoints>
+        <textpoint id="up" x="0.095" y="0.2" clickable="true" />
+        <textpoint id="down" x="0.29" y="0.2" clickable="true" />
+        <textpoint id="404" x="0.78" y="0.2" clickable="true" />
+        <textpoint id="403" x="0.78" y="0.37" clickable="true" />
+        <textpoint id="computerlab1" x="0.79" y="0.645" clickable="true" />
+        <textpoint id="E_exit" x="0.2" y="0.85" clickable="true" />
+        <textpoint id="boyswashroom" x="0.22" y="0.74" clickable="true" />
+        <textpoint id="d_washroom" x="0.19" y="0.642" clickable="true" />
+        <textpoint id="janitor" x="0.18" y="0.568" clickable="true" />
+    </textpoints>
+
+<graph>
+ <node id="elevator">
+        <connectsTo>A</connectsTo>
+    </node>
+
+    <node id="A">
+        <connectsTo>B</connectsTo>
+        <connectsTo>elevator</connectsTo>
+        <connectsTo>G</connectsTo>
+    </node>
+    <node id="B">
+        <connectsTo>C</connectsTo>
+        <connectsTo>A</connectsTo>
+        <connectsTo>403</connectsTo>
+
+    </node>
+    <node id="403">
+        <connectsTo>B</connectsTo>
+
+
+    </node>
+
+    <node id="C">
+        <connectsTo>B</connectsTo>
+        <connectsTo>A</connectsTo>
+        <connectsTo>down</connectsTo>
+        <connectsTo>D</connectsTo>
+
+    </node>
+
+    <node id="D">
+        <connectsTo>C</connectsTo>
+        <connectsTo>404</connectsTo>
+
+    </node>
+    <node id="down">
+        <connectsTo>C</connectsTo>
+        <connectsTo>up</connectsTo>
+    </node>
+
+    <node id="up">
+        <connectsTo>down</connectsTo>
+    </node>
+
+    <node id="404">
+        <connectsTo>D</connectsTo>
+    </node>
+
+    <node id="G">
+        <connectsTo>A</connectsTo>
+        <connectsTo>computerlab1</connectsTo>
+        <connectsTo>H</connectsTo>
+    </node>
+    <node id="computerlab1">
+        <connectsTo>G</connectsTo>
+    </node>
+    <node id="H">
+        <connectsTo>G</connectsTo>
+        <connectsTo>janitor</connectsTo>
+        <connectsTo>I</connectsTo>
+
+    </node>
+    <node id="janitor">
+        <connectsTo>H</connectsTo>
+    </node>
+
+    <node id="I">
+        <connectsTo>G</connectsTo>
+        <connectsTo>H</connectsTo>
+        <connectsTo>d_washroom</connectsTo>
+
+        <connectsTo>J</connectsTo>
+
+    </node>
+
+    <node id="d_washroom">
+        <connectsTo>I</connectsTo>
+
+    </node>
+    <node id="J">
+        <connectsTo>I</connectsTo>
+        <connectsTo>K</connectsTo>
+        <connectsTo>boyswashroom</connectsTo>
+    </node>
+    <node id="boyswashroom">
+        <connectsTo>J</connectsTo>
+    </node>
+
+    <node id="K">
+        <connectsTo>J</connectsTo>
+        <connectsTo>E_exit</connectsTo>
+
+    </node>
+    <node id="E_exit">
+        <connectsTo>K</connectsTo>
+
+    </node>
+
+
+</graph>
+</map>

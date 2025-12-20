@@ -1,0 +1,71 @@
+<map>
+<points>
+    <point id="elevator" x="0.11" y="0.45" clickable="true" />
+
+
+
+    <point id="parking" x="0.5" y="0.3" clickable="true" />
+    <point id="down" x="0.3" y="0.3" clickable="true" />
+    <point id="up" x="0.1" y="0.3" clickable="true" />
+
+
+
+
+
+
+    <point id="room" x="0.5" y="0.67" clickable="true" />
+
+
+
+    <point id="E_exit" x="0.5" y="0.81" clickable="true" />
+
+
+
+</points>
+    <textpoints>
+        <textpoint id="up" x="0.096" y="0.2" clickable="true" />
+        <textpoint id="down" x="0.3" y="0.2" clickable="true" />
+
+        <textpoint id="parking"  x="0.65" y="0.48" clickable="true" />
+
+        <textpoint id="E_exit" x="0.2" y="0.85" clickable="true" />
+        <textpoint id="room" x="0.2" y="0.67" clickable="true" />
+
+
+    </textpoints>
+
+<graph>
+ <node id="elevator">
+
+        <connectsTo>up</connectsTo>
+        <connectsTo>down</connectsTo>
+    </node>
+    <node id="down">
+        <connectsTo>up</connectsTo>
+        <connectsTo>parking</connectsTo>
+        <connectsTo>elevator</connectsTo>
+
+    </node>
+    <node id="up">
+        <connectsTo>down</connectsTo>
+    </node>
+    <node id="parking">
+        <connectsTo>down</connectsTo>
+        <connectsTo>room</connectsTo>
+
+    </node>
+    <node id="room">
+        <connectsTo>E_exit</connectsTo>
+        <connectsTo>parking</connectsTo>
+    </node>
+    <node id="E_exit">
+        <connectsTo>room</connectsTo>
+
+    </node>
+
+
+
+
+
+</graph>
+</map>
