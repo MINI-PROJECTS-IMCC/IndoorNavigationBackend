@@ -26,10 +26,22 @@ public class AuthController {
             - length can be 3-10 characters only
             - Can contains alphabets , digits  and underscore only
         */
-       // This if block Checks for the following pattern in username
-        if (!user.getUsername().matches("^[A-Za-z][A-Za-z0-9_]{2,9}$")) {
+       // The following if block Checks for the following pattern in username
+        String username = user.getUsername();
+        if (!username.matches("^[A-Za-z][A-Za-z0-9_]{2,9}$")) {
             return "Invalid username! Username must start with a letter, be 3-10 characters long, and contain only letters, digits, and underscores.";
         }
+        // Validate the password
+        /*
+            Password Validataion :-
+            - Length can be 3-10 characters only 
+            - Should contain atleast one alphabet , one digit , one special symbol
+        */
+        String password = user.getPassword();
+        if (!password.matches("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@#$%^&+=!]).{3,10}$")) {
+        return "Invalid password! Password must be 3-10 characters long, and include at least one letter, one number, and one special character.";
+        }
+        // If everything is perfect then save the user
         userRepository.save(user);
         return "User registered successfully!";
     }
