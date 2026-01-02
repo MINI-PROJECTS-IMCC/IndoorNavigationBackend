@@ -16,13 +16,23 @@ public class AuthController {
     // Register new user
     @PostMapping("/register")
     public String registerUser(@RequestBody User user) {
+        // Checks if the username already exists or not
         if (userRepository.findByUsername(user.getUsername()) != null) {
             return "Username already exists!";
+        }
+        /*
+            Username Validations :-
+            - Must starts with alphabet only
+            - length can be 3-10 characters only
+            - Can contains alphabets , digits  and underscore only
+        */
+       // This if block Checks for the following pattern in username
+        if (!user.getUsername().matches("^[A-Za-z][A-Za-z0-9_]{2,9}$")) {
+            return "Invalid username! Username must start with a letter, be 3-10 characters long, and contain only letters, digits, and underscores.";
         }
         userRepository.save(user);
         return "User registered successfully!";
     }
-
     // Login
     @PostMapping("/login")
     public String loginUser(@RequestBody User user) {
